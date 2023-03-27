@@ -12,7 +12,6 @@ const MovieDetails = () => {
 
     const [movie, setMovie] = useState([]);
     const [error, setError] = useState(null);
-  console.log("backLinkHref", backLinkHref);
     useEffect(() => {
         fetchMoviesInfo(id)
         .then(response => {
