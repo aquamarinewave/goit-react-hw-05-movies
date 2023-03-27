@@ -25,7 +25,7 @@ const Cast = () => {
     
     return (
         <div>
-            {!cast.length && <div>No reviews yet</div>}
+            {!cast.length && <div>No reviews yet {error}</div>}
                 <ul>
                     {cast && cast.map(cast => 
                         <li key={cast.id}>

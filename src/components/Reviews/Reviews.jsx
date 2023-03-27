@@ -22,7 +22,7 @@ const Reviews = () => {
     
         return (
             <div>
-                {!reviews.length && <div>No reviews yet</div>}
+                {!reviews.length && <div>No reviews yet  {error}</div>}
                 <ul>
                     {reviews && reviews.map(review => 
                         <li key={review.id}>

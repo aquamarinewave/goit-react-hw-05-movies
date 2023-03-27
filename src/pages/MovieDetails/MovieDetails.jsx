@@ -28,7 +28,8 @@ const MovieDetails = () => {
             <div>
                 <BackLink to={backLinkHref}>Back to products</BackLink>
 
-               <div>
+           <div>
+             {!movie && <div>{ error }</div>}
                     <img src={movie.poster_path ? `${baseImageURL}${movie.poster_path}` : "https://via.placeholder.com/500x750"} alt={movie.title} />
                         <div>
                             <h2>
@@ -48,7 +49,7 @@ const MovieDetails = () => {
                
                 <ul>
         <li>
-               <Link to="cast" state={{ ...location.state }}>Cast</Link>
+          <Link to="cast" state={{ ...location.state }}>Cast</Link>
         </li>
         <li>
           <Link to="reviews" state={{ ...location.state }}>Reviews</Link>
